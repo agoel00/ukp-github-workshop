@@ -7,8 +7,8 @@ Be creative! do whatever you want!
 - Start a web application
 - Import things from your .base module
 """
-
-
+import argparse
+from ukp_github_workshop.fibonacci import Fibonacci
 def main():  # pragma: no cover
     """
     The main function executes on commands:
@@ -26,5 +26,9 @@ def main():  # pragma: no cover
         * Run an application (Flask, FastAPI, Django, etc.)
     """
     ##### YOUR CODE HERE #####
-    print("This will do something")
+    parser = argparse.ArgumentParser()
+    parser.add_argument('n')
+    args = parser.parse_args()
+    obj = Fibonacci()
+    print(f"The {args.n}-th Fibonacci number is {obj.fib(int(args.n))}")
     ##########################

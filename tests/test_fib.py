@@ -9,5 +9,15 @@ def test_import():
         assert False
 
 ##### YOUR CODE HERE #####
+def test_fib_1():
+    f = Fibonacci()
+    assert f.fib(1) == 1
 
+def test_fib_2():
+    f = Fibonacci()
+    assert f.fib(2) == 1
+
+def test_fib_5():
+    f = Fibonacci()
+    assert f.fib(5) == 5
 ##########################
